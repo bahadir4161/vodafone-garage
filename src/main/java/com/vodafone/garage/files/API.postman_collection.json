@@ -1,0 +1,556 @@
+{
+	"info": {
+		"_postman_id": "25abd625-fa0f-4150-ad20-8e70f8d443b8",
+		"name": "Garage API",
+		"description": "Garage Application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2407247"
+	},
+	"item": [
+		{
+			"name": "api/garage",
+			"item": [
+				{
+					"name": "1_park",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"color\": \"Black\",\n  \"plate\": \"34-SO-1988\",\n  \"vehicleType\": \"Car\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/park",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"park"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"color\": \"culpa eiusmod enim sunt\",\n  \"plate\": \"Ut exercitation culp\",\n  \"vehicleType\": \"Jeep\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/park",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"park"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"et ea\""
+						}
+					]
+				},
+				{
+					"name": "2_park",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"color\": \"Black\",\r\n  \"plate\": \"34-SO-1988\",\r\n  \"vehicleType\": \"Truck\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/park",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"park"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"color\": \"culpa eiusmod enim sunt\",\n  \"plate\": \"Ut exercitation culp\",\n  \"vehicleType\": \"Jeep\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/park",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"park"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"et ea\""
+						}
+					]
+				},
+				{
+					"name": "3_park",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"color\": \"Blue\",\n  \"plate\": \"34-VO-2018\",\n  \"vehicleType\": \"Jeep\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/park",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"park"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"color\": \"culpa eiusmod enim sunt\",\n  \"plate\": \"Ut exercitation culp\",\n  \"vehicleType\": \"Jeep\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/park",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"park"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"et ea\""
+						}
+					]
+				},
+				{
+					"name": "4_park",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"color\": \"Black\",\r\n  \"plate\": \"34-HBO-2020\",\r\n  \"vehicleType\": \"Truck\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/park",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"park"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"color\": \"culpa eiusmod enim sunt\",\n  \"plate\": \"Ut exercitation culp\",\n  \"vehicleType\": \"Jeep\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/park",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"park"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"et ea\""
+						}
+					]
+				},
+				{
+					"name": "leave",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/leave/3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"leave",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/leave?ticketNumber=99857640",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"leave"
+									],
+									"query": [
+										{
+											"key": "ticketNumber",
+											"value": "99857640"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"in labore irure\""
+						}
+					]
+				},
+				{
+					"name": "park_5",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"color\": \"White\",\n  \"plate\": \"34-LO-2000\",\n  \"vehicleType\": \"Car\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/park",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"park"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"color\": \"culpa eiusmod enim sunt\",\n  \"plate\": \"Ut exercitation culp\",\n  \"vehicleType\": \"Jeep\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/park",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"park"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"et ea\""
+						}
+					]
+				},
+				{
+					"name": "status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/status",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/status",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"et ea\""
+						}
+					]
+				},
+				{
+					"name": "clear Cache",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/garage/clear-cache",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"garage",
+								"clear-cache"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/api/garage/clear-cache",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"garage",
+										"clear-cache"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8085"
+		}
+	]
+}
