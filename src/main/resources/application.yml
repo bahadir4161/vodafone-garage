@@ -1,0 +1,14 @@
+server:
+  port: 8085
+
+springdoc:
+  swagger-ui:
+    use-root-path: false
+    config-url: /apidoc
+  packagesToScan: com.vodafone.garage.resources
+  api-docs:
+    path: /apidoc
+spring:
+  application:
+    name: Garage
+
