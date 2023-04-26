@@ -53,12 +53,7 @@ public class GarageServiceImpl implements GarageService {
             }
             return new OkResponse("TicketNumber : "+newTicket.getTicketNumber()+" - Allocated " + allocatedSlotCount + (allocatedSlotCount == 1 ? " slot." : " slots."));
         } else {
-            List<Slot> availableSlotList = getAvailableSlotList(input, emptySlots);
-            if (availableSlotList.isEmpty()) {
-                return new OkResponse("Garage is full.");
-            } else {
-                return new OkResponse(parkVehicleToGarage(input,availableSlotList));
-            }
+            return new OkResponse("Garage is full.");
         }
     }
 
@@ -133,7 +128,7 @@ public class GarageServiceImpl implements GarageService {
         }
         return "TicketNumber : "+newTicket.getTicketNumber()+" - Allocated " + allocatedSlotCount + (allocatedSlotCount == 1 ? " slot." : " slots.");
     }
-    //Müsait olan slotlara göre hedef slot belirlenmesi işlemi
+    
     private Slot getTargetSlot(List<Slot> availableSlots) {
         log.debug("getTargetSlot method called.");
         for (Slot availableSlot : availableSlots) {
@@ -146,42 +141,16 @@ public class GarageServiceImpl implements GarageService {
     }
 
 
-    //İşgal edilecek slot sayısına göre müsait olan başlangıç slotlarını verir.
-    private List<Slot> getAvailableSlotList(VehicleInput input, List<Slot> emptySlots) {
-        log.debug("getAvailableSlotList method called.");
-        Integer requiredSlotCount = input.getVehicleType().getValue();
-        List<Slot> availableSlots = new ArrayList<>();
-        List<Slot> newAvailableSlots = emptySlots;
-        for (Slot emptySlot : emptySlots) {
-            Integer slotNumber = emptySlot.getSlotNumber();
-            Integer availableSlotCount = 0;
-
-            for (Slot checkSlot : newAvailableSlots) {
-                if (checkSlot.getSlotNumber().equals(slotNumber)) {
-                    availableSlotCount++;
-                    if (availableSlotCount.equals(requiredSlotCount)) {
-                        availableSlots.add(emptySlots.stream().filter(slot -> slot.getSlotNumber().equals(checkSlot.getSlotNumber() - (requiredSlotCount - 1))).findFirst().get());
-                        availableSlotCount = 0;
-                    }
-                }
-                slotNumber++;
-            }
-            newAvailableSlots = newAvailableSlots.stream().filter(slot -> !slot.getSlotNumber().equals(emptySlot.getSlotNumber())).distinct().collect(Collectors.toList());
-        }
-        //Tekrar önler ve sıralar
-        availableSlots = availableSlots.stream().distinct().sorted(Comparator.comparingInt(Slot::getSlotNumber)).collect(Collectors.toList());
-        return availableSlots;
-    }
 
     private Ticket createNewTicket(VehicleInput input) {
         log.debug("createNewTicket method called.");
         Ticket ticket = new Ticket();
-        ticket.setTicketNumber(getNewTicketNumber());
+        ticket.setTicketNumber(getNewGarageTicketNumber());
         ticket.setVehicle(VehicleMapper.toVehicle(input));
         return ticket;
     }
 
-    private Integer getNewTicketNumber() {
+    private Integer getNewGarageTicketNumber() {
         log.debug("getNewTicketNumber method called.");
         return ticketNumber += 1;
     }
